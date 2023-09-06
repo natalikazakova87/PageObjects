@@ -12,6 +12,7 @@ import static data.DataHelper.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MoneyTransferTest {
+    DashBoardPage dashBoardPage;
 
     @BeforeEach
     void setup() {
@@ -19,7 +20,7 @@ public class MoneyTransferTest {
         var authInfo = getAuthInfo();
         var verificationPage = loginPage.validLogin(authInfo);
         var verificationCode = getVerificationCode();
-        DashBoardPage DashBoardPage = verificationPage.validVerify(verificationCode);
+        dashBoardPage = verificationPage.validVerify(verificationCode);
 
     }
     @Test
