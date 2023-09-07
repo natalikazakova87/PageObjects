@@ -28,7 +28,7 @@ public class MoneyTransferTest {
     void shouldTransferMoneyFromFirstCardToSecond() {
         var firstCardInfo = getFirstCardInfo();
         var secondCardInfo = getSecondCardInfo();
-        var firstCardBalance = DashBoardPage.getCardBalance(firstCardInfo);
+        var firstCardBalance = dashBoardPage.getCardBalance(firstCardInfo);
         var secondCardBalance = dashBoardPage.getCardBalance(secondCardInfo);
         var amount = generateValidAmount(firstCardBalance);
         var expectedBalanceFirstCard = firstCardBalance - amount;
